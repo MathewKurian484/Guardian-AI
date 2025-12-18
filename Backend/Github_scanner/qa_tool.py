@@ -18,7 +18,7 @@ from langchain_core.runnables import RunnablePassthrough
 
 class RepoQATool:
     
-    def __init__(self, model_name: str = "gemini-2.5-pro-preview-03-25"):
+    def __init__(self, model_name: str = "gemini-2.5-pro"):
         if not os.environ.get("GOOGLE_API_KEY"):
             raise ValueError("GOOGLE_API_KEY not found. Please set it as an environment variable.")
         

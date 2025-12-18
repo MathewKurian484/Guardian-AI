@@ -1,5 +1,3 @@
-"""
-
 import os
 import sys
 import json
@@ -55,7 +53,7 @@ class CodeAuditRequest(BaseModel):
 class QARequest(BaseModel):
     repo_url: str
     question: str
-    model_name: Optional[str] = "gemini-2.5-pro-preview-03-25"
+    model_name: Optional[str] = "gemini-2.5-pro"
 
 class LegalAnalysisRequest(BaseModel):
     pdf_path: str
@@ -63,7 +61,7 @@ class LegalAnalysisRequest(BaseModel):
 
 class AgentQueryRequest(BaseModel):
     query: str
-    model_name: Optional[str] = "gemini-2.5-pro-preview-03-25"
+    model_name: Optional[str] = "gemini-2.5-pro"
 
 class ChatMessage(BaseModel):
     role: str

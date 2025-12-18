@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, FC } from 'react';
 import { CodeAuditResponse, ChatMessage } from '@/types';
 
 interface ProgressUpdate {
@@ -7,7 +7,8 @@ interface ProgressUpdate {
   current_file?: string;
   analyzed_files?: number;
   total_files?: number;
-  violations?: any[];
+  violations?: number;
+  file?: string;
 }
 
 interface CodeAuditState {
@@ -71,7 +72,11 @@ const AppStateContext = createContext<AppStateContextType | undefined>(undefined
 
 const STORAGE_KEY = 'guardian-ai-state';
 
-export const AppStateProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+interface AppStateProviderProps {
+  children: ReactNode;
+}
+
+export const AppStateProvider: FC<AppStateProviderProps> = ({ children }) => {
   const [state, setState] = useState<AppState>(() => {
     // Load from localStorage on mount
     try {

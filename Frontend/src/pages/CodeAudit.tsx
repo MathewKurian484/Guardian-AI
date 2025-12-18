@@ -12,13 +12,13 @@ interface ProgressUpdate {
   current_file?: string;
   analyzed_files?: number;
   total_files?: number;
-  violations?: any;
+  violations?: number;
   file?: string;
 }
 
 const CodeAudit = () => {
   const { state, updateCodeAudit, resetCodeAudit } = useAppState();
-  const { repoUrl, pdfFile, pdfFileName, modelName, results, isLoading, progressUpdates, currentProgress } = state.codeAudit;
+  const { repoUrl, pdfFile, results, isLoading, progressUpdates, currentProgress } = state.codeAudit;
   
   const [pdfPath, setPdfPath] = useState('');
   const [error, setError] = useState<ErrorState>({ hasError: false });
