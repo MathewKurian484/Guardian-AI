@@ -1,0 +1,31 @@
+# Guardian AI Backend - Complete Requirements
+
+# Core LangChain and AI dependencies
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-google-genai>=0.0.11
+langchain-core>=0.1.0
+
+# Vector stores and embeddings
+faiss-cpu>=1.7.4
+chromadb>=0.4.0
+
+# PDF processing
+pypdf>=3.17.0
+PyPDF2>=3.0.0
+
+# Git operations
+gitpython>=3.1.40
+
+# FastAPI and web server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+sse-starlette>=3.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# Text splitting and processing
+langchain-text-splitters>=0.0.1
